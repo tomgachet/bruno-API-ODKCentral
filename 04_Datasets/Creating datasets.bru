@@ -1,0 +1,31 @@
+meta {
+  name: Creating datasets
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name" : "{{datasetname}}",
+    "approvalRequired": false
+  }
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+}
+
+docs {
+  Create a dataset with a specific name within a project.
+}

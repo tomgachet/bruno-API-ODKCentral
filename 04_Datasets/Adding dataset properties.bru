@@ -1,0 +1,31 @@
+meta {
+  name: Adding dataset properties
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/properties
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name" : "{{propertyname}}"
+  }
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+  propertyname: 
+}
+
+docs {
+  Creates a new property with a specified name in the dataset.
+}
