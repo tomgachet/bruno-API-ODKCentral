@@ -1,0 +1,25 @@
+meta {
+  name: Entity details
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/entities/{{entityuuid}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 1
+  datasetname: ref_etude
+  entityuuid: 944d7f43-a80c-4d80-bf42-2b529a890272
+}
+
+docs {
+  Returns the metadata and current data of an Entity
+}
