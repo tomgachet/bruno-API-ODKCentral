@@ -7,7 +7,7 @@
 
 This repository is a Bruno collection allowing you to interact directly with the API of an ODK Central instance.
 
-This Bruno collection has been tested and is compatible with the [ODK Central v2024.3.1 version](https://github.com/getodk/central/releases) published on 2025-01-13.
+This Bruno collection has been tested and is compatible with the [ODK Central v2025.4.4 version](https://github.com/getodk/central/releases) published on 2026-03-15.
 
 ## How it works?
 
