@@ -1,0 +1,25 @@
+meta {
+  name: Entity details GeoJSON
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/entities/{{entityuuid}}/geojson
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+  entityuuid: 
+}
+
+docs {
+  Returns the GeoJSON representation of an Entity's geometry attribute, if available.
+}

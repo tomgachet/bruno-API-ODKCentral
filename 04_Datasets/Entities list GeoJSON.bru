@@ -1,0 +1,24 @@
+meta {
+  name: Entities list GeoJSON
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}/entities.geojson
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+}
+
+docs {
+  Returns the geometry-interpretable value of the geometry attribute of Entities of an entity dataset, in GeoJSON format.
+}
