@@ -1,0 +1,24 @@
+meta {
+  name: Dataset metadata
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/v1/projects/{{projectid}}/datasets/{{datasetname}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  projectid: 
+  datasetname: 
+}
+
+docs {
+  Returns the metadata of a published Dataset including properties and forms that create and consume the Dataset.
+}
